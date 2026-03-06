@@ -3,7 +3,10 @@ import joblib
 import pandas as pd
 
 # Load model
-model = joblib.load("churn_model.pkl")
+import os
+
+model_path = os.path.join(os.getcwd(), "churn_model.pkl")
+model = joblib.load(model_path)
 
 st.set_page_config(page_title="Churn Prediction App", layout="wide")
 
